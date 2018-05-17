@@ -35,6 +35,34 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <cTool>
+          <incDir>
+            <pElem>asf</pElem>
+            <pElem>asf/common/boards</pElem>
+            <pElem>asf/common/utils</pElem>
+            <pElem>asf/sam0/utils</pElem>
+            <pElem>asf/sam0/boards</pElem>
+            <pElem>asf/sam0/boards/samc21_xplained_pro</pElem>
+            <pElem>asf/sam0/drivers/port</pElem>
+            <pElem>asf/sam0/drivers/system</pElem>
+            <pElem>asf/sam0/drivers/system/clock</pElem>
+            <pElem>asf/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>asf/sam0/drivers/system/interrupt</pElem>
+            <pElem>asf/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>asf/sam0/drivers/system/pinmux</pElem>
+            <pElem>asf/sam0/drivers/system/power</pElem>
+            <pElem>asf/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>asf/sam0/drivers/system/reset</pElem>
+            <pElem>asf/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>asf/sam0/utils</pElem>
+            <pElem>asf/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>asf/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>asf/sam0/utils/header_files</pElem>
+            <pElem>asf/sam0/utils/preprocessor</pElem>
+            <pElem>asf/thirdparty/CMSIS/Include</pElem>
+            <pElem>asf/thirdparty/CMSIS/Lib/GCC</pElem>
+          </incDir>
+        </cTool>
       </compileType>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>

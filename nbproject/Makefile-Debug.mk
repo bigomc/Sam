@@ -65,7 +65,7 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/sam: ${OBJECTFILES}
 ${OBJECTDIR}/main.o: main.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
+	$(COMPILE.c) -g -Iasf -Iasf/common/boards -Iasf/common/utils -Iasf/sam0/utils -Iasf/sam0/boards -Iasf/sam0/boards/samc21_xplained_pro -Iasf/sam0/drivers/port -Iasf/sam0/drivers/system -Iasf/sam0/drivers/system/clock -Iasf/sam0/drivers/system/clock/clock_samc20_c21 -Iasf/sam0/drivers/system/interrupt -Iasf/sam0/drivers/system/interrupt/system_interrupt_samc20_c21 -Iasf/sam0/drivers/system/pinmux -Iasf/sam0/drivers/system/power -Iasf/sam0/drivers/system/power/power_sam_c -Iasf/sam0/drivers/system/reset -Iasf/sam0/drivers/system/reset/reset_sam_c -Iasf/sam0/utils -Iasf/sam0/utils/cmsis/samc21/include -Iasf/sam0/utils/cmsis/samc21/source -Iasf/sam0/utils/header_files -Iasf/sam0/utils/preprocessor -Iasf/thirdparty/CMSIS/Include -Iasf/thirdparty/CMSIS/Lib/GCC -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
 
 # Subprojects
 .build-subprojects:
