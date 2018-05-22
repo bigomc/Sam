@@ -89,10 +89,10 @@
 #include <status_codes.h>
 
 // From module: Generic board support
-#include <common/boards/board.h>
+#include <board.h>
 
 // From module: Interrupt management - SAM implementation
-#include <common/utils/interrupt.h>
+#include <interrupt.h>
 
 // From module: PORT - GPIO Pin Control
 //#include <port.h>

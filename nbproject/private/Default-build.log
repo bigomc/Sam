@@ -1,0 +1,49 @@
+MKDIR   Build/common/utils/interrupt/
+CC      Build/common/utils/interrupt/interrupt_sam_nvic.o
+MKDIR   Build/sam0/applications/led_toggle/
+CC      Build/sam0/applications/led_toggle/led_toggle.o
+MKDIR   Build/sam0/boards/samc21_xplained_pro/
+CC      Build/sam0/boards/samc21_xplained_pro/board_init.o
+MKDIR   Build/sam0/drivers/port/
+CC      Build/sam0/drivers/port/port.o
+MKDIR   Build/sam0/drivers/system/clock/clock_samc20_c21/
+CC      Build/sam0/drivers/system/clock/clock_samc20_c21/clock.o
+CC      Build/sam0/drivers/system/clock/clock_samc20_c21/gclk.o
+MKDIR   Build/sam0/drivers/system/interrupt/
+CC      Build/sam0/drivers/system/interrupt/system_interrupt.o
+MKDIR   Build/sam0/drivers/system/pinmux/
+CC      Build/sam0/drivers/system/pinmux/pinmux.o
+CC      Build/sam0/drivers/system/system.o
+MKDIR   Build/sam0/utils/cmsis/samc21/source/gcc/
+CC      Build/sam0/utils/cmsis/samc21/source/gcc/startup_samc21.o
+CC      Build/sam0/utils/cmsis/samc21/source/system_samc21.o
+MKDIR   Build/sam0/utils/syscalls/gcc/
+CC      Build/sam0/utils/syscalls/gcc/syscalls.o
+LN      led_toggle_flash.elf
+SIZE    led_toggle_flash.elf
+led_toggle_flash.elf  :
+section              size         addr
+.text               0x77c          0x0
+.relocate             0x4   0x20000000
+.bss                 0x30   0x20000004
+.stack             0x2004   0x20000034
+.ARM.attributes      0x28          0x0
+.comment             0x59          0x0
+.debug_info        0x74fd          0x0
+.debug_abbrev      0x1325          0x0
+.debug_aranges      0x220          0x0
+.debug_ranges       0x208          0x0
+.debug_macro      0x1baaa          0x0
+.debug_line        0x5602          0x0
+.debug_str        0x9b3c7          0x0
+.debug_frame        0x4dc          0x0
+.debug_loc         0x19c6          0x0
+Total             0xc9794
+
+
+   text	   data	    bss	    dec	    hex	filename
+  0x77c	    0x4	 0x2034	  10164	   27b4	led_toggle_flash.elf
+OBJDUMP led_toggle_flash.lss
+NM      led_toggle_flash.sym
+OBJCOPY led_toggle_flash.hex
+OBJCOPY led_toggle_flash.bin
