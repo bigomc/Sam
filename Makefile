@@ -2,7 +2,7 @@ PRJ_NAME = program
 
 ASF_PATH = asf
 
-CROSS_COMPILE = arm-none-eabi-
+#CROSS_COMPILE = arm-none-eabi-
 CC		= $(CROSS_COMPILE)gcc
 AR		= $(CROSS_COMPILE)ar
 AS		= $(CROSS_COMPILE)as
@@ -37,10 +37,12 @@ _OBJ = test.o main.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 linux: $(OBJ)
+	@echo "Compiling for linux"
 	$(shell test -d $(TDIR) || (mkdir -p $(TDIR)))
-	$(LD) -o $(TDIR)/$(PRJ_NAME) $^ $(LDFLAGS)
+	$(CC) -o $(TDIR)/$(PRJ_NAME) $^ $(CFLAGS) $($LIBS)
 
 arm: $(OBJ)
+	@echo "Compiling for arm"
 	$(shell test -d $(TDIR) || (mkdir -p $(TDIR)))
 	$(LD) -o $(TDIR)/$(PRJ_NAME) $^ $(LDFLAGS) -T $(LINKER_SCRIPT_FLASH)
 
@@ -49,6 +51,5 @@ $(ODIR)/%.o: $(SDIR)/%.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 .PHONY: clean
-
 clean:
 	rm -rf $(TDIR)/ $(ODIR)/ *~ core $(IDIR)/*~
