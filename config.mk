@@ -36,11 +36,14 @@
 # \asf_license_stop
 #
 
+# Project Name
+PROJECTNAME = Sam
+
 # Path to top level project directory
 PRJ_PATH = .
 
 # Path to top level ASF directory relative to this project directory.
-ASF_PATH = asf
+ASF_PATH = ../asf/xdk-asf-3.39.0
 
 # Target CPU architecture: cortex-m3, cortex-m4
 ARCH = cortex-m0plus
@@ -50,8 +53,8 @@ PART = samc21j18a
 
 # Application target name. Given with suffix .a for library and .elf for a
 # standalone application.
-TARGET_FLASH = led_toggle_flash.elf
-TARGET_SRAM = led_toggle_sram.elf
+TARGET_FLASH = $(PROJECTNAME).elf
+TARGET_SRAM = $(PROJECTNAME).elf
 
 # List of C source files.
 CSRCS = \
@@ -157,3 +160,4 @@ PREBUILD_CMD =
 POSTBUILD_CMD = 
 
 BUILD_DIR = Build
+DEBUG_DIR = Debug

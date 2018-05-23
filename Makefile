@@ -216,11 +216,6 @@ flashflags-gnu-y        :=
 clean-files             :=
 clean-dirs              :=
 
-clean-files             += $(wildcard $(target) $(project).map)
-clean-files             += $(wildcard $(project).hex $(project).bin)
-clean-files             += $(wildcard $(project).lss $(project).sym)
-clean-files             += $(wildcard $(build))
-
 # Use pipes instead of temporary files for communication between processes
 cflags-gnu-y    += -pipe
 asflags-gnu-y   += -pipe
@@ -306,9 +301,6 @@ ifneq ($(strip $(linker_script)),)
 ldflags-gnu-y   += -Wl,-T $(linker_script)
 endif
 
-# Output a link map file and a cross reference table
-ldflags-gnu-y   += -Wl,-Map=$(project).map,--cref
-
 # Add library search paths relative to the top level directory.
 ldflags-gnu-y   += $(foreach _LIB_PATH,$(addprefix $(ASF_PATH)/,$(LIB_PATH)),-L$(_LIB_PATH))
 
@@ -328,14 +320,30 @@ else
 	build-dir        =
 endif
 
+# If a custom debug directory is specified, use it -- force trailing / in directory name.
+ifdef DEBUG_DIR
+	debug-dir       := $(dir $(DEBUG_DIR))$(if $(notdir $(DEBUG_DIR)),$(notdir $(DEBUG_DIR))/)
+else
+	debug-dir        =
+endif
+
+# Output a link map file and a cross reference table
+ldflags-gnu-y   += -Wl,-Map=$(debug-dir)$(project).map,--cref
+
 # Create object files list from source files list.
-obj-y                   := $(addprefix $(build-dir), $(addsuffix .o,$(basename $(ASF_PATH)/$(CSRCS) $(ASSRCS))))
+obj-y                   := $(addprefix $(build-dir), $(addsuffix .o,$(basename $(CSRCS) $(ASSRCS))))
 # Create dependency files list from source files list.
 dep-files               := $(wildcard $(foreach f,$(obj-y),$(basename $(f)).d))
+
+clean-files             += $(wildcard $(debug-dir)$(target) $(debug-dir)$(project).map)
+clean-files             += $(wildcard $(debug-dir)$(project).hex $(debug-dir)$(project).bin)
+clean-files             += $(wildcard $(debug-dir)$(project).lss $(debug-dir)$(project).sym)
+clean-files             += $(wildcard $(build))
 
 clean-files             += $(wildcard $(obj-y))
 clean-files             += $(dep-files)
 
+clean-dirs              += $(debug-dir)
 clean-dirs              += $(call reverse,$(sort $(wildcard $(dir $(obj-y)))))
 
 # Default target.
@@ -349,7 +357,7 @@ ifeq ($(target_type),lib)
 all: $(target) $(project).lss $(project).sym
 else
 ifeq ($(target_type),elf)
-all: prebuild $(target) $(project).lss $(project).sym $(project).hex $(project).bin postbuild
+all: prebuild $(addprefix $(debug-dir), $(target)) $(project).lss $(project).sym $(project).hex $(project).bin postbuild
 endif
 endif
 endif
@@ -451,9 +459,16 @@ else
 ifeq ($(target_type),elf)
 # Link the object files into an ELF file. Also make sure the target is rebuilt
 # if the common Makefile.sam.in or project config.mk is changed.
-$(target): $(linker_script) $(MAKEFILE_PATH) config.mk $(obj-y)
+$(debug-dir)$(target): $(linker_script) $(MAKEFILE_PATH) config.mk $(obj-y)
+	$(Q)test -d $(dir $(addprefix $(debug-dir),$@)) || echo $(MSG_MKDIR)
+ifeq ($(os),Windows)
+	$(Q)test -d $(patsubst %/,%,$(dir $@)) || mkdir $(subst /,\,$(dir $@))
+else
+	$(Q)test -d $(dir $@) || mkdir -p $(dir $@)
+endif
 	@echo $(MSG_LINKING)
-	$(Q)$(LD) $(l_flags) $(obj-y) $(libflags-gnu-y) -o $@
+	$(Q)
+	$(LD) $(l_flags) $(obj-y) $(libflags-gnu-y) -o $@
 	@echo $(MSG_SIZE)
 	$(Q)$(SIZE) -Ax $@
 	$(Q)$(SIZE) -Bx $@
@@ -461,24 +476,24 @@ endif
 endif
 
 # Create extended function listing from target output file.
-%.lss: $(target)
+%.lss: $(debug-dir)$(target)
 	@echo $(MSG_EXTENDED_LISTING)
-	$(Q)$(OBJDUMP) -h -S $< > $@
+	$(Q)$(OBJDUMP) -h -S $< > $(addprefix $(debug-dir),$@)
 
 # Create symbol table from target output file.
-%.sym: $(target)
+%.sym: $(debug-dir)$(target)
 	@echo $(MSG_SYMBOL_TABLE)
-	$(Q)$(NM) -n $< > $@
+	$(Q)$(NM) -n $< > $(addprefix $(debug-dir),$@)
 
 # Create Intel HEX image from ELF output file.
-%.hex: $(target)
+%.hex: $(debug-dir)$(target)
 	@echo $(MSG_IHEX_IMAGE)
-	$(Q)$(OBJCOPY) -O ihex $(flashflags-gnu-y)  $< $@
+	$(Q)$(OBJCOPY) -O ihex $(flashflags-gnu-y)  $< $(addprefix $(debug-dir),$@)
 
 # Create binary image from ELF output file.
-%.bin: $(target)
+%.bin: $(debug-dir)$(target)
 	@echo $(MSG_BINARY_IMAGE)
-	$(Q)$(OBJCOPY) -O binary $< $@
+	$(Q)$(OBJCOPY) -O binary $< $(addprefix $(debug-dir),$@)
 
 # Provide information about the detected host operating system.
 .SECONDARY: info-os

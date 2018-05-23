@@ -2,71 +2,237 @@
 <configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df root="." name="0">
-      <df name="asf">
-        <df name="common">
-          <df name="utils">
-            <df name="interrupt">
-              <in>interrupt_sam_nvic.c</in>
-            </df>
-          </df>
-        </df>
-        <df name="sam0">
-          <df name="applications">
-            <df name="led_toggle">
-              <in>led_toggle.c</in>
-            </df>
-          </df>
-          <df name="boards">
-            <df name="samc21_xplained_pro">
-              <in>board_init.c</in>
-            </df>
-          </df>
-          <df name="drivers">
-            <df name="port">
-              <in>port.c</in>
-            </df>
-            <df name="system">
-              <df name="clock">
-                <df name="clock_samc20_c21">
-                  <in>clock.c</in>
-                  <in>gclk.c</in>
-                </df>
-              </df>
-              <df name="interrupt">
-                <in>system_interrupt.c</in>
-              </df>
-              <df name="pinmux">
-                <in>pinmux.c</in>
-              </df>
-              <in>system.c</in>
-            </df>
-          </df>
-          <df name="utils">
-            <df name="cmsis">
-              <df name="samc21">
-                <df name="source">
-                  <df name="gcc">
-                    <in>startup_samc21.c</in>
-                  </df>
-                  <in>system_samc21.c</in>
-                </df>
-              </df>
-            </df>
-            <df name="syscalls">
-              <df name="gcc">
-                <in>syscalls.c</in>
-              </df>
-            </df>
-          </df>
-        </df>
-      </df>
       <in>main.c</in>
     </df>
+    <logicalFolder name="xdk-asf-3.39.0"
+                   displayName="xdk-asf-3.39.0"
+                   projectFiles="true"
+                   root="../asf/xdk-asf-3.39.0">
+      <logicalFolder name="common" displayName="common" projectFiles="true">
+        <logicalFolder name="boards" displayName="boards" projectFiles="true">
+          <itemPath>../asf/xdk-asf-3.39.0/common/boards/board.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="utils" displayName="utils" projectFiles="true">
+          <logicalFolder name="interrupt" displayName="interrupt" projectFiles="true">
+            <itemPath>../asf/xdk-asf-3.39.0/common/utils/interrupt/interrupt_sam_nvic.c</itemPath>
+            <itemPath>../asf/xdk-asf-3.39.0/common/utils/interrupt/interrupt_sam_nvic.h</itemPath>
+          </logicalFolder>
+          <itemPath>../asf/xdk-asf-3.39.0/common/utils/interrupt.h</itemPath>
+          <itemPath>../asf/xdk-asf-3.39.0/common/utils/parts.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="sam0" displayName="sam0" projectFiles="true">
+        <logicalFolder name="applications"
+                       displayName="applications"
+                       projectFiles="true">
+          <logicalFolder name="led_toggle" displayName="led_toggle" projectFiles="true">
+            <logicalFolder name="samc21_xplained_pro"
+                           displayName="samc21_xplained_pro"
+                           projectFiles="true">
+              <itemPath>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro/conf_board.h</itemPath>
+              <itemPath>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro/conf_clocks.h</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="boards" displayName="boards" projectFiles="true">
+          <logicalFolder name="samc21_xplained_pro"
+                         displayName="samc21_xplained_pro"
+                         projectFiles="true">
+            <itemPath>../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro/board_init.c</itemPath>
+            <itemPath>../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro/samc21_xplained_pro.h</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="drivers" displayName="drivers" projectFiles="true">
+          <logicalFolder name="port" displayName="port" projectFiles="true">
+            <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/port/port.c</itemPath>
+            <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/port/port.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="system" displayName="system" projectFiles="true">
+            <logicalFolder name="clock" displayName="clock" projectFiles="true">
+              <logicalFolder name="clock_samc20_c21"
+                             displayName="clock_samc20_c21"
+                             projectFiles="true">
+                <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21/clock.c</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21/clock_config_check.h</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21/clock_feature.h</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21/gclk.c</itemPath>
+              </logicalFolder>
+              <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock.h</itemPath>
+              <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/gclk.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="interrupt" displayName="interrupt" projectFiles="true">
+              <logicalFolder name="system_interrupt_samc20_c21"
+                             displayName="system_interrupt_samc20_c21"
+                             projectFiles="true">
+                <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21/system_interrupt_features.h</itemPath>
+              </logicalFolder>
+              <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt.c</itemPath>
+              <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="pinmux" displayName="pinmux" projectFiles="true">
+              <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux/pinmux.c</itemPath>
+              <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux/pinmux.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="power" displayName="power" projectFiles="true">
+              <logicalFolder name="power_sam_c" displayName="power_sam_c" projectFiles="true">
+                <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c/power.h</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+            <logicalFolder name="reset" displayName="reset" projectFiles="true">
+              <logicalFolder name="reset_sam_c" displayName="reset_sam_c" projectFiles="true">
+                <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c/reset.h</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+            <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/system/system.c</itemPath>
+            <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/system/system.h</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="utils" displayName="utils" projectFiles="true">
+          <logicalFolder name="cmsis" displayName="cmsis" projectFiles="true">
+            <logicalFolder name="samc21" displayName="samc21" projectFiles="true">
+              <logicalFolder name="include" displayName="include" projectFiles="true">
+                <logicalFolder name="component" displayName="component" projectFiles="true">
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/ac.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/adc.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/can.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/ccl.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/dac.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/divas.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/dmac.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/dsu.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/eic.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/evsys.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/freqm.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/gclk.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/hmatrixb.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/mclk.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/mtb.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/nvmctrl.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/osc32kctrl.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/oscctrl.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/pac.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/pm.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/port.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/rstc.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/rtc.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/sdadc.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/sercom.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/supc.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/tal.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/tc.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/tcc.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/tsens.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component/wdt.h</itemPath>
+                </logicalFolder>
+                <logicalFolder name="instance" displayName="instance" projectFiles="true">
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/ac.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/adc0.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/adc1.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/can0.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/can1.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/ccl.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/dac.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/divas.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/dmac.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/dsu.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/eic.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/evsys.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/freqm.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/gclk.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/hmatrixhs.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/mclk.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/mtb.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/nvmctrl.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/osc32kctrl.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/oscctrl.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/pac.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/pm.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/port.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/rstc.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/rtc.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/sdadc.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/sercom0.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/sercom1.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/sercom2.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/sercom3.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/sercom4.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/sercom5.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/supc.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/tal.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/tc0.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/tc1.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/tc2.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/tc3.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/tc4.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/tcc0.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/tcc1.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/tcc2.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/tsens.h</itemPath>
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance/wdt.h</itemPath>
+                </logicalFolder>
+                <logicalFolder name="pio" displayName="pio" projectFiles="true">
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio/samc21j18a.h</itemPath>
+                </logicalFolder>
+                <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/samc21.h</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/samc21j18a.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="source" displayName="source" projectFiles="true">
+                <logicalFolder name="gcc" displayName="gcc" projectFiles="true">
+                  <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source/gcc/startup_samc21.c</itemPath>
+                </logicalFolder>
+                <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source/system_samc21.c</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source/system_samc21.h</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="header_files"
+                         displayName="header_files"
+                         projectFiles="true">
+            <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/header_files/io.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="linker_scripts"
+                         displayName="linker_scripts"
+                         projectFiles="true">
+            <logicalFolder name="samc21" displayName="samc21" projectFiles="true">
+              <logicalFolder name="gcc" displayName="gcc" projectFiles="true">
+                <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/linker_scripts/samc21/gcc/samc21j18a_flash.ld</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="preprocessor"
+                         displayName="preprocessor"
+                         projectFiles="true">
+            <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor/mrecursion.h</itemPath>
+            <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor/mrepeat.h</itemPath>
+            <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor/preprocessor.h</itemPath>
+            <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor/stringz.h</itemPath>
+            <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor/tpaste.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="syscalls" displayName="syscalls" projectFiles="true">
+            <logicalFolder name="gcc" displayName="gcc" projectFiles="true">
+              <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/syscalls/gcc/syscalls.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/compiler.h</itemPath>
+          <itemPath>../asf/xdk-asf-3.39.0/sam0/utils/status_codes.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="thirdparty" displayName="thirdparty" projectFiles="true">
+        <logicalFolder name="CMSIS" displayName="CMSIS" projectFiles="true">
+          <logicalFolder name="Include" displayName="Include" projectFiles="true">
+            <itemPath>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include/core_cm0plus.h</itemPath>
+            <itemPath>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include/core_cmFunc.h</itemPath>
+            <itemPath>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include/core_cmInstr.h</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+      </logicalFolder>
+    </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="false"
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
+      <itemPath>config.mk</itemPath>
       <itemPath>nbproject/private/launcher.properties</itemPath>
     </logicalFolder>
   </logicalFolder>
@@ -78,12 +244,13 @@
   <confs>
     <conf name="Default" type="0">
       <toolsSet>
-        <compilerSet>ATMEL_ARM|GNU</compilerSet>
+        <compilerSet>ARM_NONE|GNU</compilerSet>
         <dependencyChecking>false</dependencyChecking>
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <flagsDictionary>
-        <element flagsID="0" commonFlags="-O1 -std=gnu99"/>
+        <element flagsID="0" commonFlags="-O1"/>
+        <element flagsID="1" commonFlags="-O1 -std=gnu99"/>
       </flagsDictionary>
       <codeAssistance>
       </codeAssistance>
@@ -92,34 +259,34 @@
           <buildCommandWorkingDir>.</buildCommandWorkingDir>
           <buildCommand>${MAKE} -f Makefile</buildCommand>
           <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
-          <executablePath></executablePath>
+          <executablePath>led_toggle_flash.elf</executablePath>
           <cTool>
             <incDir>
-              <pElem>asf/common/boards</pElem>
-              <pElem>asf/common/utils</pElem>
-              <pElem>asf/sam0/applications/led_toggle</pElem>
-              <pElem>asf/sam0/applications/led_toggle/samc21_xplained_pro</pElem>
-              <pElem>asf/sam0/boards</pElem>
-              <pElem>asf/sam0/boards/samc21_xplained_pro</pElem>
-              <pElem>asf/sam0/drivers/port</pElem>
-              <pElem>asf/sam0/drivers/system</pElem>
-              <pElem>asf/sam0/drivers/system/clock</pElem>
-              <pElem>asf/sam0/drivers/system/clock/clock_samc20_c21</pElem>
-              <pElem>asf/sam0/drivers/system/interrupt</pElem>
-              <pElem>asf/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
-              <pElem>asf/sam0/drivers/system/pinmux</pElem>
-              <pElem>asf/sam0/drivers/system/power</pElem>
-              <pElem>asf/sam0/drivers/system/power/power_sam_c</pElem>
-              <pElem>asf/sam0/drivers/system/reset</pElem>
-              <pElem>asf/sam0/drivers/system/reset/reset_sam_c</pElem>
-              <pElem>asf/sam0/utils</pElem>
-              <pElem>asf/sam0/utils/cmsis/samc21/include</pElem>
-              <pElem>asf/sam0/utils/cmsis/samc21/source</pElem>
-              <pElem>asf/sam0/utils/header_files</pElem>
-              <pElem>asf/sam0/utils/preprocessor</pElem>
-              <pElem>asf/thirdparty/CMSIS/Include</pElem>
-              <pElem>asf/thirdparty/CMSIS/Lib/GCC</pElem>
-              <pElem>asf/sam0/applications/led_toggle/samc21_xplained_pro/gcc</pElem>
+              <pElem>../asf/xdk-asf-3.39.0/common/boards</pElem>
+              <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+              <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle</pElem>
+              <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro</pElem>
+              <pElem>../asf/xdk-asf-3.39.0/sam0/boards</pElem>
+              <pElem>../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro</pElem>
+              <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+              <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+              <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+              <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+              <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+              <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+              <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+              <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power</pElem>
+              <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+              <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset</pElem>
+              <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+              <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+              <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+              <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+              <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+              <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+              <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+              <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
+              <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro/gcc</pElem>
             </incDir>
             <preprocessorList>
               <Elem>=__samc21j18a__</Elem>
@@ -129,91 +296,105 @@
               <Elem>printf=iprintf</Elem>
             </preprocessorList>
           </cTool>
+          <ccTool>
+            <incDir>
+              <pElem>.</pElem>
+            </incDir>
+            <preprocessorList>
+              <Elem>=__samc21j18a__</Elem>
+            </preprocessorList>
+          </ccTool>
         </makeTool>
         <preBuild>
           <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
           <preBuildCommand></preBuildCommand>
         </preBuild>
       </makefileType>
-      <item path="asf/common/utils/interrupt/interrupt_sam_nvic.c"
+      <item path="../asf/xdk-asf-3.39.0/common/utils/interrupt/interrupt_sam_nvic.c"
             ex="false"
             tool="0"
             flavor2="3">
-        <cTool flags="0">
+        <cTool flags="1">
         </cTool>
       </item>
-      <item path="asf/sam0/applications/led_toggle/led_toggle.c"
+      <item path="../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro/board_init.c"
             ex="false"
             tool="0"
             flavor2="3">
-        <cTool flags="0">
+        <cTool flags="1">
         </cTool>
       </item>
-      <item path="asf/sam0/boards/samc21_xplained_pro/board_init.c"
+      <item path="../asf/xdk-asf-3.39.0/sam0/drivers/port/port.c"
             ex="false"
             tool="0"
             flavor2="3">
-        <cTool flags="0">
+        <cTool flags="1">
         </cTool>
       </item>
-      <item path="asf/sam0/drivers/port/port.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="0">
-        </cTool>
-      </item>
-      <item path="asf/sam0/drivers/system/clock/clock_samc20_c21/clock.c"
+      <item path="../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21/clock.c"
             ex="false"
             tool="0"
             flavor2="3">
-        <cTool flags="0">
+        <cTool flags="1">
         </cTool>
       </item>
-      <item path="asf/sam0/drivers/system/clock/clock_samc20_c21/gclk.c"
+      <item path="../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21/gclk.c"
             ex="false"
             tool="0"
             flavor2="3">
-        <cTool flags="0">
+        <cTool flags="1">
         </cTool>
       </item>
-      <item path="asf/sam0/drivers/system/interrupt/system_interrupt.c"
+      <item path="../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt.c"
             ex="false"
             tool="0"
             flavor2="3">
-        <cTool flags="0">
+        <cTool flags="1">
         </cTool>
       </item>
-      <item path="asf/sam0/drivers/system/pinmux/pinmux.c"
+      <item path="../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux/pinmux.c"
             ex="false"
             tool="0"
             flavor2="3">
-        <cTool flags="0">
+        <cTool flags="1">
         </cTool>
       </item>
-      <item path="asf/sam0/drivers/system/system.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="0">
-        </cTool>
-      </item>
-      <item path="asf/sam0/utils/cmsis/samc21/source/gcc/startup_samc21.c"
+      <item path="../asf/xdk-asf-3.39.0/sam0/drivers/system/system.c"
             ex="false"
             tool="0"
             flavor2="3">
-        <cTool flags="0">
+        <cTool flags="1">
         </cTool>
       </item>
-      <item path="asf/sam0/utils/cmsis/samc21/source/system_samc21.c"
+      <item path="../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source/gcc/startup_samc21.c"
             ex="false"
             tool="0"
             flavor2="3">
-        <cTool flags="0">
+        <cTool flags="1">
         </cTool>
       </item>
-      <item path="asf/sam0/utils/syscalls/gcc/syscalls.c"
+      <item path="../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source/system_samc21.c"
             ex="false"
             tool="0"
             flavor2="3">
-        <cTool flags="0">
+        <cTool flags="1">
         </cTool>
       </item>
-      <folder path="0/asf">
+      <item path="../asf/xdk-asf-3.39.0/sam0/utils/linker_scripts/samc21/gcc/samc21j18a_flash.ld"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/sam0/utils/syscalls/gcc/syscalls.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <folder path="xdk-asf-3.39.0">
         <cTool>
           <incDir>
             <pElem>.</pElem>
@@ -221,7 +402,7 @@
         </cTool>
       </folder>
       <item path="main.c" ex="false" tool="0" flavor2="3">
-        <cTool flags="0">
+        <cTool flags="1">
         </cTool>
       </item>
     </conf>

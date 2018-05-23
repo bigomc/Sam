@@ -1,7 +1,5 @@
-MKDIR   Build/common/utils/interrupt/
-CC      Build/common/utils/interrupt/interrupt_sam_nvic.o
-MKDIR   Build/sam0/applications/led_toggle/
-CC      Build/sam0/applications/led_toggle/led_toggle.o
+MKDIR   Build/../asf/xdk-asf-3.39.0/common/utils/interrupt/
+CC      Build/../asf/xdk-asf-3.39.0/common/utils/interrupt/interrupt_sam_nvic.o
 MKDIR   Build/sam0/boards/samc21_xplained_pro/
 CC      Build/sam0/boards/samc21_xplained_pro/board_init.o
 MKDIR   Build/sam0/drivers/port/
@@ -19,6 +17,7 @@ CC      Build/sam0/utils/cmsis/samc21/source/gcc/startup_samc21.o
 CC      Build/sam0/utils/cmsis/samc21/source/system_samc21.o
 MKDIR   Build/sam0/utils/syscalls/gcc/
 CC      Build/sam0/utils/syscalls/gcc/syscalls.o
+CC      Build/main.o
 LN      led_toggle_flash.elf
 SIZE    led_toggle_flash.elf
 led_toggle_flash.elf  :
@@ -28,17 +27,17 @@ section              size         addr
 .bss                 0x30   0x20000004
 .stack             0x2004   0x20000034
 .ARM.attributes      0x28          0x0
-.comment             0x59          0x0
-.debug_info        0x74fd          0x0
-.debug_abbrev      0x1325          0x0
+.comment             0x6e          0x0
+.debug_info        0x6e3b          0x0
+.debug_abbrev      0x12f4          0x0
 .debug_aranges      0x220          0x0
 .debug_ranges       0x208          0x0
-.debug_macro      0x1baaa          0x0
-.debug_line        0x5602          0x0
-.debug_str        0x9b3c7          0x0
+.debug_macro      0x1bdc0          0x0
+.debug_line        0x5fae          0x0
+.debug_str        0x9b6e3          0x0
 .debug_frame        0x4dc          0x0
-.debug_loc         0x19c6          0x0
-Total             0xc9794
+.debug_loc         0x14cf          0x0
+Total             0xc9b9d
 
 
    text	   data	    bss	    dec	    hex	filename
