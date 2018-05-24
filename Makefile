@@ -1,6 +1,6 @@
 PRJ_NAME = program
 
-ASF_PATH = asf
+ASF_PATH = ../asf/xdk-asf-3.39.0
 
 #CROSS_COMPILE = arm-none-eabi-
 CC		= $(CROSS_COMPILE)gcc

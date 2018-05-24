@@ -4,9 +4,9 @@
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
             <name>Sam</name>
-            <c-extensions>c,ld,m</c-extensions>
-            <cpp-extensions>cpp</cpp-extensions>
-            <header-extensions>dat,h,x</header-extensions>
+            <c-extensions>c</c-extensions>
+            <cpp-extensions/>
+            <header-extensions>h</header-extensions>
             <sourceEncoding>UTF-8</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
@@ -14,11 +14,11 @@
             </sourceRootList>
             <confList>
                 <confElem>
-                    <name>Default</name>
+                    <name>arm</name>
                     <type>0</type>
                 </confElem>
                 <confElem>
-                    <name>Linux</name>
+                    <name>linux</name>
                     <type>0</type>
                 </confElem>
             </confList>

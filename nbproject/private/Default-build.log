@@ -1,4 +1,4 @@
-arm-none-eabi-gcc -c -o obj/test.o source/test.c -Wall -Iinclude
-make: arm-none-eabi-gcc: Command not found
-Makefile:48: recipe for target 'obj/test.o' failed
-make: *** [obj/test.o] Error 127
+gcc -c -o obj/test.o source/test.c -Wall -Iinclude
+gcc -c -o obj/main.o source/main.c -Wall -Iinclude
+Compiling for linux
+gcc -o debug/program obj/test.o obj/main.o -Wall -Iinclude 
