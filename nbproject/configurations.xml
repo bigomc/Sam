@@ -12171,10 +12171,6 @@
           </df>
         </df>
       </df>
-      <df name="source">
-        <in>main.c</in>
-        <in>test.c</in>
-      </df>
     </df>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -37590,14 +37586,6 @@
             tool="0"
             flavor2="2">
       </item>
-      <folder path="0/source">
-        <cTool>
-          <incDir>
-            <pElem>include</pElem>
-            <pElem>.</pElem>
-          </incDir>
-        </cTool>
-      </folder>
       <item path="source/main.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="source/test.c" ex="false" tool="0" flavor2="0">
@@ -63003,14 +62991,6 @@
             tool="0"
             flavor2="2">
       </item>
-      <folder path="0/source">
-        <cTool>
-          <incDir>
-            <pElem>include</pElem>
-            <pElem>.</pElem>
-          </incDir>
-        </cTool>
-      </folder>
       <item path="source/main.c" ex="false" tool="0" flavor2="9">
       </item>
       <item path="source/test.c" ex="false" tool="0" flavor2="9">

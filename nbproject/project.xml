@@ -6,7 +6,7 @@
             <name>Sam</name>
             <c-extensions>c,ld,m</c-extensions>
             <cpp-extensions>cpp</cpp-extensions>
-            <header-extensions>h</header-extensions>
+            <header-extensions>dat,h,x</header-extensions>
             <sourceEncoding>UTF-8</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>

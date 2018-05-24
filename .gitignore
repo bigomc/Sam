@@ -1,2 +1,7 @@
-debug/
+/Debug/
+/debug/
+/Build/
+/build/
 obj/
+
+nbproject/private/
