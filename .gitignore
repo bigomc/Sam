@@ -2,5 +2,6 @@
 /Build/
 /Debug/
 /debug/
+/obj/
 
 nbproject/private/
