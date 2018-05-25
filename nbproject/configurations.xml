@@ -314,6 +314,29 @@
               <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/list.c</itemPath>
             </logicalFolder>
           </logicalFolder>
+          <logicalFolder name="freertos-7.4.2"
+                         displayName="freertos-7.4.2"
+                         projectFiles="true">
+            <logicalFolder name="Source" displayName="Source" projectFiles="true">
+              <logicalFolder name="include" displayName="include" projectFiles="true">
+                <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-7.4.2/Source/include/FreeRTOS.h</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-7.4.2/Source/include/croutine.h</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-7.4.2/Source/include/list.h</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-7.4.2/Source/include/mpu_wrappers.h</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-7.4.2/Source/include/portable.h</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-7.4.2/Source/include/projdefs.h</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-7.4.2/Source/include/task.h</itemPath>
+              </logicalFolder>
+              <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-7.4.2/Source/croutine.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="freertos-7.5.2"
+                         displayName="freertos-7.5.2"
+                         projectFiles="true">
+            <logicalFolder name="Source" displayName="Source" projectFiles="true">
+              <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-7.5.2/Source/croutine.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
           <logicalFolder name="freertos-8.0.1"
                          displayName="freertos-8.0.1"
                          projectFiles="true">
@@ -349,6 +372,28 @@
               <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/queue.c</itemPath>
               <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/tasks.c</itemPath>
               <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/timers.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="freertos-8.2.3"
+                         displayName="freertos-8.2.3"
+                         projectFiles="true">
+            <logicalFolder name="Source" displayName="Source" projectFiles="true">
+              <logicalFolder name="portable" displayName="portable" projectFiles="true">
+                <logicalFolder name="GCC" displayName="GCC" projectFiles="true">
+                  <logicalFolder name="ARM_CM0" displayName="ARM_CM0" projectFiles="true">
+                    <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.2.3/Source/portable/GCC/ARM_CM0/port.c</itemPath>
+                  </logicalFolder>
+                </logicalFolder>
+                <logicalFolder name="MemMang" displayName="MemMang" projectFiles="true">
+                  <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.2.3/Source/portable/MemMang/heap_1.c</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+              <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.2.3/Source/croutine.c</itemPath>
+              <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.2.3/Source/event_groups.c</itemPath>
+              <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.2.3/Source/list.c</itemPath>
+              <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.2.3/Source/queue.c</itemPath>
+              <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.2.3/Source/tasks.c</itemPath>
+              <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.2.3/Source/timers.c</itemPath>
             </logicalFolder>
           </logicalFolder>
         </logicalFolder>
@@ -938,7 +983,8 @@
       <folder path="xdk-asf-3.39.0/common">
         <cTool>
           <incDir>
-            <pElem>../asf/xdk-asf-3.39.0/include</pElem>
+            <pElem>include</pElem>
+            <pElem>include/FreeRTOS</pElem>
             <pElem>../asf/xdk-asf-3.39.0/common/boards</pElem>
             <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
             <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle</pElem>
@@ -963,15 +1009,15 @@
             <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
             <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
             <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/include/FreeRTOS</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/include</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/GCC/ARM_CM0</pElem>
             <pElem>.</pElem>
           </incDir>
           <preprocessorList>
             <Elem>=__samc21j18a__</Elem>
             <Elem>ARM_MATH_CM0PLUS=true</Elem>
             <Elem>BOARD=SAMC21_XPLAINED_PRO</Elem>
+            <Elem>__FREERTOS__</Elem>
             <Elem>__SAMC21J18A__</Elem>
             <Elem>printf=iprintf</Elem>
           </preprocessorList>
@@ -1049,7 +1095,8 @@
       <folder path="xdk-asf-3.39.0/sam0/boards">
         <cTool>
           <incDir>
-            <pElem>../asf/xdk-asf-3.39.0/include</pElem>
+            <pElem>include</pElem>
+            <pElem>include/FreeRTOS</pElem>
             <pElem>../asf/xdk-asf-3.39.0/common/boards</pElem>
             <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
             <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle</pElem>
@@ -1074,15 +1121,15 @@
             <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
             <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
             <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/include/FreeRTOS</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/include</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/GCC/ARM_CM0</pElem>
             <pElem>.</pElem>
           </incDir>
           <preprocessorList>
             <Elem>=__samc21j18a__</Elem>
             <Elem>ARM_MATH_CM0PLUS=true</Elem>
             <Elem>BOARD=SAMC21_XPLAINED_PRO</Elem>
+            <Elem>__FREERTOS__</Elem>
             <Elem>__SAMC21J18A__</Elem>
             <Elem>printf=iprintf</Elem>
           </preprocessorList>
@@ -1091,7 +1138,8 @@
       <folder path="xdk-asf-3.39.0/sam0/drivers/port">
         <cTool>
           <incDir>
-            <pElem>../asf/xdk-asf-3.39.0/include</pElem>
+            <pElem>include</pElem>
+            <pElem>include/FreeRTOS</pElem>
             <pElem>../asf/xdk-asf-3.39.0/common/boards</pElem>
             <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
             <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle</pElem>
@@ -1116,15 +1164,15 @@
             <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
             <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
             <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/include/FreeRTOS</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/include</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/GCC/ARM_CM0</pElem>
             <pElem>.</pElem>
           </incDir>
           <preprocessorList>
             <Elem>=__samc21j18a__</Elem>
             <Elem>ARM_MATH_CM0PLUS=true</Elem>
             <Elem>BOARD=SAMC21_XPLAINED_PRO</Elem>
+            <Elem>__FREERTOS__</Elem>
             <Elem>__SAMC21J18A__</Elem>
             <Elem>printf=iprintf</Elem>
           </preprocessorList>
@@ -1147,7 +1195,8 @@
       <folder path="xdk-asf-3.39.0/sam0/drivers/system">
         <cTool>
           <incDir>
-            <pElem>../asf/xdk-asf-3.39.0/include</pElem>
+            <pElem>include</pElem>
+            <pElem>include/FreeRTOS</pElem>
             <pElem>../asf/xdk-asf-3.39.0/common/boards</pElem>
             <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
             <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle</pElem>
@@ -1172,15 +1221,15 @@
             <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
             <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
             <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/include/FreeRTOS</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/include</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/GCC/ARM_CM0</pElem>
             <pElem>.</pElem>
           </incDir>
           <preprocessorList>
             <Elem>=__samc21j18a__</Elem>
             <Elem>ARM_MATH_CM0PLUS=true</Elem>
             <Elem>BOARD=SAMC21_XPLAINED_PRO</Elem>
+            <Elem>__FREERTOS__</Elem>
             <Elem>__SAMC21J18A__</Elem>
             <Elem>printf=iprintf</Elem>
           </preprocessorList>
@@ -1189,7 +1238,8 @@
       <folder path="xdk-asf-3.39.0/sam0/utils">
         <cTool>
           <incDir>
-            <pElem>../asf/xdk-asf-3.39.0/include</pElem>
+            <pElem>include</pElem>
+            <pElem>include/FreeRTOS</pElem>
             <pElem>../asf/xdk-asf-3.39.0/common/boards</pElem>
             <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
             <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle</pElem>
@@ -1214,15 +1264,15 @@
             <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
             <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
             <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/include/FreeRTOS</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/include</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/GCC/ARM_CM0</pElem>
             <pElem>.</pElem>
           </incDir>
           <preprocessorList>
             <Elem>=__samc21j18a__</Elem>
             <Elem>ARM_MATH_CM0PLUS=true</Elem>
             <Elem>BOARD=SAMC21_XPLAINED_PRO</Elem>
+            <Elem>__FREERTOS__</Elem>
             <Elem>__SAMC21J18A__</Elem>
             <Elem>printf=iprintf</Elem>
           </preprocessorList>
@@ -1279,16 +1329,60 @@
       <folder path="xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1">
         <cTool>
           <incDir>
-            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro</pElem>
+            <pElem>include</pElem>
+            <pElem>include/FreeRTOS</pElem>
             <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include</pElem>
             <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/GCC/ARM_CM0</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro/gcc</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro/gcc</pElem>
             <pElem>.</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>__FREERTOS__</Elem>
+          </preprocessorList>
         </cTool>
       </folder>
+      <item path="source/main.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>include/FreeRTOS</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>=__samc21j18a__</Elem>
+            <Elem>ARM_MATH_CM0PLUS=true</Elem>
+            <Elem>BOARD=SAMC21_XPLAINED_PRO</Elem>
+            <Elem>__FREERTOS__</Elem>
+            <Elem>__SAMC21J18A__</Elem>
+            <Elem>printf=iprintf</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
     </conf>
     <conf name="Verbose" type="0">
       <toolsSet>
@@ -1777,6 +1871,20 @@
         <cTool flags="1">
         </cTool>
       </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-7.4.2/Source/croutine.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-7.5.2/Source/croutine.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
       <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/croutine.c"
             ex="false"
             tool="0"
@@ -1827,6 +1935,62 @@
         </cTool>
       </item>
       <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/timers.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.2.3/Source/croutine.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.2.3/Source/event_groups.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.2.3/Source/list.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.2.3/Source/portable/GCC/ARM_CM0/port.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.2.3/Source/portable/MemMang/heap_1.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.2.3/Source/queue.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.2.3/Source/tasks.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.2.3/Source/timers.c"
             ex="false"
             tool="0"
             flavor2="3">
@@ -1906,8 +2070,8 @@
             <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
             <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
             <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/include</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/GCC/ARM_CM0</pElem>
             <pElem>.</pElem>
           </incDir>
           <preprocessorList>
@@ -2018,8 +2182,8 @@
             <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
             <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
             <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/include</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/GCC/ARM_CM0</pElem>
             <pElem>.</pElem>
           </incDir>
           <preprocessorList>
@@ -2061,8 +2225,8 @@
             <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
             <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
             <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/include</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/GCC/ARM_CM0</pElem>
             <pElem>.</pElem>
           </incDir>
           <preprocessorList>
@@ -2118,8 +2282,8 @@
             <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
             <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
             <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/include</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/GCC/ARM_CM0</pElem>
             <pElem>.</pElem>
           </incDir>
           <preprocessorList>
@@ -2161,8 +2325,8 @@
             <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
             <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
             <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/include</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/GCC/ARM_CM0</pElem>
             <pElem>.</pElem>
           </incDir>
           <preprocessorList>
@@ -2208,6 +2372,7 @@
             <Elem>=__samc21j18a__</Elem>
             <Elem>ARM_MATH_CM0PLUS=true</Elem>
             <Elem>BOARD=SAMC21_XPLAINED_PRO</Elem>
+            <Elem>__FREERTOS__</Elem>
             <Elem>__SAMC21J18A__</Elem>
             <Elem>printf=iprintf</Elem>
           </preprocessorList>
@@ -2222,24 +2387,95 @@
             <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/portable/GCC/ARM_CM0</pElem>
             <pElem>.</pElem>
           </incDir>
-          <preprocessorList>
-            <Elem>__FREERTOS__</Elem>
-          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/thirdparty/freertos/freertos-7.4.2">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>include/FreeRTOS</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-7.4.2/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-7.4.2/Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/thirdparty/freertos/freertos-7.5.2">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>include/FreeRTOS</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-7.5.2/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-7.5.2/Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>.</pElem>
+          </incDir>
         </cTool>
       </folder>
       <folder path="xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1">
         <cTool>
           <incDir>
-            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro</pElem>
+            <pElem>include</pElem>
+            <pElem>include/FreeRTOS</pElem>
             <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include</pElem>
             <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/GCC/ARM_CM0</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro/gcc</pElem>
-            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro/gcc</pElem>
             <pElem>.</pElem>
           </incDir>
         </cTool>
       </folder>
+      <folder path="xdk-asf-3.39.0/thirdparty/freertos/freertos-8.2.3">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>include/FreeRTOS</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.2.3/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.2.3/Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <item path="source/main.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>include/FreeRTOS</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>=__samc21j18a__</Elem>
+            <Elem>ARM_MATH_CM0PLUS=true</Elem>
+            <Elem>BOARD=SAMC21_XPLAINED_PRO</Elem>
+            <Elem>__FREERTOS__</Elem>
+            <Elem>__SAMC21J18A__</Elem>
+            <Elem>printf=iprintf</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
     </conf>
   </confs>
 </configurationDescriptor>

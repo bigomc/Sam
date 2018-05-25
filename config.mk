@@ -56,6 +56,9 @@ PART = samc21j18a
 TARGET_FLASH = $(PROJECTNAME).elf
 TARGET_SRAM = $(PROJECTNAME).elf
 
+#FreeRTOS version
+RTOS_VERSION = 8.0.1
+
 # List of C source files.
 CSRCS = \
        common/utils/interrupt/interrupt_sam_nvic.c        \
@@ -69,15 +72,15 @@ CSRCS = \
        sam0/utils/cmsis/samc21/source/gcc/startup_samc21.c \
        sam0/utils/cmsis/samc21/source/system_samc21.c     \
        sam0/utils/syscalls/gcc/syscalls.c		  \
-       thirdparty/freertos/freertos-10.0.0/Source/croutine.c \
-       thirdparty/freertos/freertos-10.0.0/Source/event_groups.c \
-       thirdparty/freertos/freertos-10.0.0/Source/list.c   \
-       thirdparty/freertos/freertos-10.0.0/Source/portable/GCC/ARM_CM0/port.c \
-       thirdparty/freertos/freertos-10.0.0/Source/portable/MemMang/heap_1.c \
-       thirdparty/freertos/freertos-10.0.0/Source/queue.c  \
-       thirdparty/freertos/freertos-10.0.0/Source/tasks.c  \
-       thirdparty/freertos/freertos-10.0.0/Source/timers.c \
-       main.c
+       thirdparty/freertos/freertos-$(RTOS_VERSION)/Source/croutine.c \
+       thirdparty/freertos/freertos-$(RTOS_VERSION)/Source/event_groups.c \
+       thirdparty/freertos/freertos-$(RTOS_VERSION)/Source/list.c   \
+       thirdparty/freertos/freertos-$(RTOS_VERSION)/Source/portable/GCC/ARM_CM0/port.c \
+       thirdparty/freertos/freertos-$(RTOS_VERSION)/Source/portable/MemMang/heap_1.c \
+       thirdparty/freertos/freertos-$(RTOS_VERSION)/Source/queue.c  \
+       thirdparty/freertos/freertos-$(RTOS_VERSION)/Source/tasks.c  \
+       thirdparty/freertos/freertos-$(RTOS_VERSION)/Source/timers.c \
+       source/main.c
 
 # List of assembler source files.
 ASSRCS = 
@@ -110,8 +113,8 @@ INC_PATH = \
        $(ASF_PATH)/sam0/utils/preprocessor                            \
        $(ASF_PATH)/thirdparty/CMSIS/Include                           \
        $(ASF_PATH)/thirdparty/CMSIS/Lib/GCC                           \
-       $(ASF_PATH)/thirdparty/freertos/freertos-10.0.0/Source/include  \
-       $(ASF_PATH)/thirdparty/freertos/freertos-10.0.0/Source/portable/GCC/ARM_CM0 \
+       $(ASF_PATH)/thirdparty/freertos/freertos-$(RTOS_VERSION)/Source/include  \
+       $(ASF_PATH)/thirdparty/freertos/freertos-$(RTOS_VERSION)/Source/portable/GCC/ARM_CM0 \
 
 # Additional search paths for libraries.
 LIB_PATH =  \
