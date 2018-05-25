@@ -234,8 +234,10 @@ cflags-gnu-y    += -Wpointer-arith
 cxxflags-gnu-y  += -Wpointer-arith
 
 # Preprocessor flags.
-cppflags-gnu-y  += $(foreach INC,$(addprefix $(ASF_PATH)/,$(INC_PATH)),-I$(INC))
-asflags-gnu-y   += $(foreach INC,$(addprefix $(ASF_PATH)/,$(INC_PATH)),'-Wa,-I$(INC)')
+#cppflags-gnu-y  += $(foreach INC,$(addprefix $(ASF_PATH)/,$(INC_PATH)),-I$(INC))
+cppflags-gnu-y  += $(foreach INC, $(INC_PATH),-I$(INC))
+#asflags-gnu-y   += $(foreach INC,$(addprefix $(ASF_PATH)/,$(INC_PATH)),'-Wa,-I$(INC)')
+asflags-gnu-y   += $(foreach INC, $(INC_PATH),'-Wa,-I$(INC)')
 
 # CPU specific flags.
 cpuflags-gnu-y  += -mcpu=$(ARCH) -mthumb -D=__$(PART)__
@@ -467,8 +469,7 @@ else
 	$(Q)test -d $(dir $@) || mkdir -p $(dir $@)
 endif
 	@echo $(MSG_LINKING)
-	$(Q)
-	$(LD) $(l_flags) $(obj-y) $(libflags-gnu-y) -o $@
+	$(Q)$(LD) $(l_flags) $(obj-y) $(libflags-gnu-y) -o $@
 	@echo $(MSG_SIZE)
 	$(Q)$(SIZE) -Ax $@
 	$(Q)$(SIZE) -Bx $@

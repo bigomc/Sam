@@ -2,7 +2,6 @@
 <configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df root="." name="0">
-      <in>main.c</in>
     </df>
     <logicalFolder name="xdk-asf-3.39.0"
                    displayName="xdk-asf-3.39.0"
@@ -19,6 +18,39 @@
           </logicalFolder>
           <itemPath>../asf/xdk-asf-3.39.0/common/utils/interrupt.h</itemPath>
           <itemPath>../asf/xdk-asf-3.39.0/common/utils/parts.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="common2" displayName="common2" projectFiles="true">
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <logicalFolder name="display" displayName="display" projectFiles="true">
+            <logicalFolder name="ssd1306" displayName="ssd1306" projectFiles="true">
+              <itemPath>../asf/xdk-asf-3.39.0/common2/components/display/ssd1306/ssd1306.c</itemPath>
+              <itemPath>../asf/xdk-asf-3.39.0/common2/components/display/ssd1306/ssd1306.h</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="services" displayName="services" projectFiles="true">
+          <logicalFolder name="delay" displayName="delay" projectFiles="true">
+            <logicalFolder name="sam0" displayName="sam0" projectFiles="true">
+              <itemPath>../asf/xdk-asf-3.39.0/common2/services/delay/sam0/systick_counter.c</itemPath>
+              <itemPath>../asf/xdk-asf-3.39.0/common2/services/delay/sam0/systick_counter.h</itemPath>
+            </logicalFolder>
+            <itemPath>../asf/xdk-asf-3.39.0/common2/services/delay/delay.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="gfx_mono" displayName="gfx_mono" projectFiles="true">
+            <itemPath>../asf/xdk-asf-3.39.0/common2/services/gfx_mono/gfx_mono.h</itemPath>
+            <itemPath>../asf/xdk-asf-3.39.0/common2/services/gfx_mono/gfx_mono_framebuffer.c</itemPath>
+            <itemPath>../asf/xdk-asf-3.39.0/common2/services/gfx_mono/gfx_mono_framebuffer.h</itemPath>
+            <itemPath>../asf/xdk-asf-3.39.0/common2/services/gfx_mono/gfx_mono_generic.c</itemPath>
+            <itemPath>../asf/xdk-asf-3.39.0/common2/services/gfx_mono/gfx_mono_generic.h</itemPath>
+            <itemPath>../asf/xdk-asf-3.39.0/common2/services/gfx_mono/gfx_mono_null.h</itemPath>
+            <itemPath>../asf/xdk-asf-3.39.0/common2/services/gfx_mono/gfx_mono_text.c</itemPath>
+            <itemPath>../asf/xdk-asf-3.39.0/common2/services/gfx_mono/gfx_mono_text.h</itemPath>
+            <itemPath>../asf/xdk-asf-3.39.0/common2/services/gfx_mono/gfx_mono_ug_2832hsweg04.c</itemPath>
+            <itemPath>../asf/xdk-asf-3.39.0/common2/services/gfx_mono/gfx_mono_ug_2832hsweg04.h</itemPath>
+            <itemPath>../asf/xdk-asf-3.39.0/common2/services/gfx_mono/sysfont.c</itemPath>
+            <itemPath>../asf/xdk-asf-3.39.0/common2/services/gfx_mono/sysfont.h</itemPath>
+          </logicalFolder>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="sam0" displayName="sam0" projectFiles="true">
@@ -46,6 +78,25 @@
           <logicalFolder name="port" displayName="port" projectFiles="true">
             <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/port/port.c</itemPath>
             <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/port/port.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="sercom" displayName="sercom" projectFiles="true">
+            <logicalFolder name="spi" displayName="spi" projectFiles="true">
+              <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/sercom/spi/spi.c</itemPath>
+              <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/sercom/spi/spi.h</itemPath>
+              <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/sercom/spi/spi_interrupt.c</itemPath>
+              <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/sercom/spi/spi_interrupt.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="usart" displayName="usart" projectFiles="true">
+              <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/sercom/usart/usart.c</itemPath>
+              <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/sercom/usart/usart.h</itemPath>
+              <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/sercom/usart/usart_interrupt.c</itemPath>
+              <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/sercom/usart/usart_interrupt.h</itemPath>
+            </logicalFolder>
+            <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/sercom/sercom.c</itemPath>
+            <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/sercom/sercom.h</itemPath>
+            <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/sercom/sercom_interrupt.c</itemPath>
+            <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/sercom/sercom_interrupt.h</itemPath>
+            <itemPath>../asf/xdk-asf-3.39.0/sam0/drivers/sercom/sercom_pinout.h</itemPath>
           </logicalFolder>
           <logicalFolder name="system" displayName="system" projectFiles="true">
             <logicalFolder name="clock" displayName="clock" projectFiles="true">
@@ -225,6 +276,82 @@
             <itemPath>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include/core_cmInstr.h</itemPath>
           </logicalFolder>
         </logicalFolder>
+        <logicalFolder name="freertos" displayName="freertos" projectFiles="true">
+          <logicalFolder name="demo" displayName="demo" projectFiles="true">
+            <logicalFolder name="oled1_xpro_example"
+                           displayName="oled1_xpro_example"
+                           projectFiles="true">
+              <logicalFolder name="samd20_xplained_pro"
+                             displayName="samd20_xplained_pro"
+                             projectFiles="true">
+                <logicalFolder name="gcc" displayName="gcc" projectFiles="true">
+                  <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro/gcc/asf.h</itemPath>
+                </logicalFolder>
+                <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro/FreeRTOSConfig.h</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro/conf_board.h</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro/conf_demo.h</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro/conf_spi.h</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro/conf_ssd1306.h</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro/conf_sysfont.h</itemPath>
+              </logicalFolder>
+              <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/cdc.h</itemPath>
+              <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/oled1.h</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="freertos-10.0.0"
+                         displayName="freertos-10.0.0"
+                         projectFiles="true">
+            <logicalFolder name="Source" displayName="Source" projectFiles="true">
+              <logicalFolder name="portable" displayName="portable" projectFiles="true">
+                <logicalFolder name="GCC" displayName="GCC" projectFiles="true">
+                  <logicalFolder name="ARM_CM0" displayName="ARM_CM0" projectFiles="true">
+                    <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/portable/GCC/ARM_CM0/port.c</itemPath>
+                  </logicalFolder>
+                </logicalFolder>
+              </logicalFolder>
+              <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/croutine.c</itemPath>
+              <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/event_groups.c</itemPath>
+              <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/list.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="freertos-8.0.1"
+                         displayName="freertos-8.0.1"
+                         projectFiles="true">
+            <logicalFolder name="Source" displayName="Source" projectFiles="true">
+              <logicalFolder name="include" displayName="include" projectFiles="true">
+                <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include/FreeRTOS.h</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include/StackMacros.h</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include/croutine.h</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include/event_groups.h</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include/list.h</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include/mpu_wrappers.h</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include/portable.h</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include/projdefs.h</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include/queue.h</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include/semphr.h</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include/task.h</itemPath>
+                <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include/timers.h</itemPath>
+              </logicalFolder>
+              <logicalFolder name="portable" displayName="portable" projectFiles="true">
+                <logicalFolder name="GCC" displayName="GCC" projectFiles="true">
+                  <logicalFolder name="ARM_CM0" displayName="ARM_CM0" projectFiles="true">
+                    <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/GCC/ARM_CM0/port.c</itemPath>
+                    <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/GCC/ARM_CM0/portmacro.h</itemPath>
+                  </logicalFolder>
+                </logicalFolder>
+                <logicalFolder name="MemMang" displayName="MemMang" projectFiles="true">
+                  <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/MemMang/heap_1.c</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+              <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/croutine.c</itemPath>
+              <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/event_groups.c</itemPath>
+              <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/list.c</itemPath>
+              <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/queue.c</itemPath>
+              <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/tasks.c</itemPath>
+              <itemPath>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/timers.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
@@ -260,42 +387,6 @@
           <buildCommand>${MAKE} -f Makefile</buildCommand>
           <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
           <executablePath>led_toggle_flash.elf</executablePath>
-          <cTool>
-            <incDir>
-              <pElem>../asf/xdk-asf-3.39.0/common/boards</pElem>
-              <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
-              <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle</pElem>
-              <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro</pElem>
-              <pElem>../asf/xdk-asf-3.39.0/sam0/boards</pElem>
-              <pElem>../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro</pElem>
-              <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
-              <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
-              <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
-              <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
-              <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
-              <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
-              <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
-              <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power</pElem>
-              <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
-              <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset</pElem>
-              <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
-              <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
-              <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
-              <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
-              <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
-              <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
-              <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
-              <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
-              <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro/gcc</pElem>
-            </incDir>
-            <preprocessorList>
-              <Elem>=__samc21j18a__</Elem>
-              <Elem>ARM_MATH_CM0PLUS=true</Elem>
-              <Elem>BOARD=SAMC21_XPLAINED_PRO</Elem>
-              <Elem>__SAMC21J18A__</Elem>
-              <Elem>printf=iprintf</Elem>
-            </preprocessorList>
-          </cTool>
           <ccTool>
             <incDir>
               <pElem>.</pElem>
@@ -317,6 +408,165 @@
         <cTool flags="1">
         </cTool>
       </item>
+      <item path="../asf/xdk-asf-3.39.0/common2/components/display/ssd1306/ssd1306.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/common2/services/delay/sam0/systick_counter.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/common2/services/gfx_mono/gfx_mono_framebuffer.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/common2/services/gfx_mono</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/common2/services/gfx_mono/gfx_mono_generic.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/common2/services/gfx_mono</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/common2/services/gfx_mono/gfx_mono_text.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/common2/services/gfx_mono</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro/gcc</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common2/services/delay</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common2/services/delay/sam0</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom/spi</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom/usart</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common2/components/display/ssd1306</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/common2/services/gfx_mono/gfx_mono_ug_2832hsweg04.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/common2/services/gfx_mono</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common2/components/display/ssd1306</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom/spi</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common2/services/delay</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common2/services/delay/sam0</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/common2/services/gfx_mono/sysfont.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common2/services/gfx_mono</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
       <item path="../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro/board_init.c"
             ex="false"
             tool="0"
@@ -329,6 +579,190 @@
             tool="0"
             flavor2="3">
         <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/sam0/drivers/sercom/sercom.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/sam0/drivers/sercom/sercom_interrupt.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/sam0/drivers/sercom/spi/spi.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/sam0/drivers/sercom/spi/spi_interrupt.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/sam0/drivers/sercom/usart/usart.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/sam0/drivers/sercom/usart/usart_interrupt.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>.</pElem>
+          </incDir>
         </cTool>
       </item>
       <item path="../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21/clock.c"
@@ -394,17 +828,1418 @@
         <cTool flags="1">
         </cTool>
       </item>
-      <folder path="xdk-asf-3.39.0">
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/croutine.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/croutine.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/event_groups.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/list.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/GCC/ARM_CM0/port.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/MemMang/heap_1.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/queue.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/tasks.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/timers.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <folder path="0">
         <cTool>
           <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro/gcc</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro/gcc</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>=__samc21j18a__</Elem>
+            <Elem>ARM_MATH_CM0PLUS=true</Elem>
+            <Elem>BOARD=SAMC21_XPLAINED_PRO</Elem>
+            <Elem>__SAMC21J18A__</Elem>
+            <Elem>printf=iprintf</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/common">
+        <cTool>
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/include/FreeRTOS</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>=__samc21j18a__</Elem>
+            <Elem>ARM_MATH_CM0PLUS=true</Elem>
+            <Elem>BOARD=SAMC21_XPLAINED_PRO</Elem>
+            <Elem>__SAMC21J18A__</Elem>
+            <Elem>printf=iprintf</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/common2">
+        <cTool>
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/common/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>SPI_CALLBACK_MODE=true</Elem>
+            <Elem>SYSTICK_MODE</Elem>
+            <Elem>USART_CALLBACK_MODE=true</Elem>
+            <Elem>__FREERTOS__</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/common2/components">
+        <cTool>
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/common2/components/display/ssd1306</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom/spi</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common2/services/delay/sam0</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common2/services/delay</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards</pElem>
             <pElem>.</pElem>
           </incDir>
         </cTool>
       </folder>
-      <item path="main.c" ex="false" tool="0" flavor2="3">
+      <folder path="xdk-asf-3.39.0/common2/services/delay">
+        <cTool>
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/common2/services/delay/sam0</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common2/services/delay</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/sam0/boards">
+        <cTool>
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/include/FreeRTOS</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>=__samc21j18a__</Elem>
+            <Elem>ARM_MATH_CM0PLUS=true</Elem>
+            <Elem>BOARD=SAMC21_XPLAINED_PRO</Elem>
+            <Elem>__SAMC21J18A__</Elem>
+            <Elem>printf=iprintf</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/sam0/drivers/port">
+        <cTool>
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/include/FreeRTOS</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>=__samc21j18a__</Elem>
+            <Elem>ARM_MATH_CM0PLUS=true</Elem>
+            <Elem>BOARD=SAMC21_XPLAINED_PRO</Elem>
+            <Elem>__SAMC21J18A__</Elem>
+            <Elem>printf=iprintf</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/sam0/drivers/sercom/spi">
+        <cTool>
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom/spi</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/sam0/drivers/sercom/usart">
+        <cTool>
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom/usart</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/sam0/drivers/system">
+        <cTool>
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/include/FreeRTOS</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>=__samc21j18a__</Elem>
+            <Elem>ARM_MATH_CM0PLUS=true</Elem>
+            <Elem>BOARD=SAMC21_XPLAINED_PRO</Elem>
+            <Elem>__SAMC21J18A__</Elem>
+            <Elem>printf=iprintf</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/sam0/utils">
+        <cTool>
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/include/FreeRTOS</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>=__samc21j18a__</Elem>
+            <Elem>ARM_MATH_CM0PLUS=true</Elem>
+            <Elem>BOARD=SAMC21_XPLAINED_PRO</Elem>
+            <Elem>__SAMC21J18A__</Elem>
+            <Elem>printf=iprintf</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/thirdparty">
+        <cTool>
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>=__samc21j18a__</Elem>
+            <Elem>ARM_MATH_CM0PLUS=true</Elem>
+            <Elem>BOARD=SAMC21_XPLAINED_PRO</Elem>
+            <Elem>__SAMC21J18A__</Elem>
+            <Elem>printf=iprintf</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0">
+        <cTool>
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/include/FreeRTOS</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1">
+        <cTool>
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro/gcc</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro/gcc</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+    </conf>
+    <conf name="Verbose" type="0">
+      <toolsSet>
+        <compilerSet>ARM_NONE|GNU</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-O1"/>
+        <element flagsID="1" commonFlags="-O1 -std=gnu99"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile V=1</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath>led_toggle_flash.elf</executablePath>
+          <ccTool>
+            <incDir>
+              <pElem>.</pElem>
+            </incDir>
+            <preprocessorList>
+              <Elem>=__samc21j18a__</Elem>
+            </preprocessorList>
+          </ccTool>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand></preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <item path="../asf/xdk-asf-3.39.0/common/utils/interrupt/interrupt_sam_nvic.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
         <cTool flags="1">
         </cTool>
       </item>
+      <item path="../asf/xdk-asf-3.39.0/common2/components/display/ssd1306/ssd1306.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/common2/services/delay/sam0/systick_counter.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/common2/services/gfx_mono/gfx_mono_framebuffer.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/common2/services/gfx_mono</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/common2/services/gfx_mono/gfx_mono_generic.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/common2/services/gfx_mono</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/common2/services/gfx_mono/gfx_mono_text.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/common2/services/gfx_mono</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro/gcc</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common2/services/delay</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common2/services/delay/sam0</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom/spi</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom/usart</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common2/components/display/ssd1306</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/common2/services/gfx_mono/gfx_mono_ug_2832hsweg04.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/common2/services/gfx_mono</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common2/components/display/ssd1306</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom/spi</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common2/services/delay</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common2/services/delay/sam0</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/common2/services/gfx_mono/sysfont.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common2/services/gfx_mono</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro/board_init.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/sam0/drivers/port/port.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/sam0/drivers/sercom/sercom.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/sam0/drivers/sercom/sercom_interrupt.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/sam0/drivers/sercom/spi/spi.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/sam0/drivers/sercom/spi/spi_interrupt.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/sam0/drivers/sercom/usart/usart.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/sam0/drivers/sercom/usart/usart_interrupt.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21/clock.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21/gclk.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux/pinmux.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/sam0/drivers/system/system.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source/gcc/startup_samc21.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source/system_samc21.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/sam0/utils/linker_scripts/samc21/gcc/samc21j18a_flash.ld"
+            ex="false"
+            tool="1"
+            flavor2="4">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/sam0/utils/syscalls/gcc/syscalls.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/croutine.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/event_groups.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/list.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/portable/GCC/ARM_CM0/port.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/croutine.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/event_groups.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/list.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/GCC/ARM_CM0/port.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/MemMang/heap_1.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/queue.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/tasks.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/timers.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <folder path="0">
+        <cTool>
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro/gcc</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro/gcc</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>=__samc21j18a__</Elem>
+            <Elem>ARM_MATH_CM0PLUS=true</Elem>
+            <Elem>BOARD=SAMC21_XPLAINED_PRO</Elem>
+            <Elem>__SAMC21J18A__</Elem>
+            <Elem>printf=iprintf</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/common">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>include/FreeRTOS</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>=__samc21j18a__</Elem>
+            <Elem>ARM_MATH_CM0PLUS=true</Elem>
+            <Elem>BOARD=SAMC21_XPLAINED_PRO</Elem>
+            <Elem>__FREERTOS__</Elem>
+            <Elem>__SAMC21J18A__</Elem>
+            <Elem>printf=iprintf</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/common2">
+        <cTool>
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/common/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>SPI_CALLBACK_MODE=true</Elem>
+            <Elem>SYSTICK_MODE</Elem>
+            <Elem>USART_CALLBACK_MODE=true</Elem>
+            <Elem>__FREERTOS__</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/common2/components">
+        <cTool>
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/common2/components/display/ssd1306</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom/spi</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common2/services/delay/sam0</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common2/services/delay</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/common2/services/delay">
+        <cTool>
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/common2/services/delay/sam0</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common2/services/delay</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/component</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/instance</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include/pio</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/sam0/boards">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>include/FreeRTOS</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>=__samc21j18a__</Elem>
+            <Elem>ARM_MATH_CM0PLUS=true</Elem>
+            <Elem>BOARD=SAMC21_XPLAINED_PRO</Elem>
+            <Elem>__FREERTOS__</Elem>
+            <Elem>__SAMC21J18A__</Elem>
+            <Elem>printf=iprintf</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/sam0/drivers/port">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>include/FreeRTOS</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>=__samc21j18a__</Elem>
+            <Elem>ARM_MATH_CM0PLUS=true</Elem>
+            <Elem>BOARD=SAMC21_XPLAINED_PRO</Elem>
+            <Elem>__FREERTOS__</Elem>
+            <Elem>__SAMC21J18A__</Elem>
+            <Elem>printf=iprintf</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/sam0/drivers/sercom/spi">
+        <cTool>
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom/spi</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/sam0/drivers/sercom/usart">
+        <cTool>
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/sercom/usart</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/sam0/drivers/system">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>include/FreeRTOS</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>=__samc21j18a__</Elem>
+            <Elem>ARM_MATH_CM0PLUS=true</Elem>
+            <Elem>BOARD=SAMC21_XPLAINED_PRO</Elem>
+            <Elem>__FREERTOS__</Elem>
+            <Elem>__SAMC21J18A__</Elem>
+            <Elem>printf=iprintf</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/sam0/utils">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>include/FreeRTOS</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>=__samc21j18a__</Elem>
+            <Elem>ARM_MATH_CM0PLUS=true</Elem>
+            <Elem>BOARD=SAMC21_XPLAINED_PRO</Elem>
+            <Elem>__FREERTOS__</Elem>
+            <Elem>__SAMC21J18A__</Elem>
+            <Elem>printf=iprintf</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/thirdparty">
+        <cTool>
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/common/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/boards/samc21_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/port</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/clock/clock_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/interrupt/system_interrupt_samc20_c21</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/pinmux</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/power/power_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/drivers/system/reset/reset_sam_c</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/cmsis/samc21/source</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/header_files</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/utils/preprocessor</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/CMSIS/Lib/GCC</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>=__samc21j18a__</Elem>
+            <Elem>ARM_MATH_CM0PLUS=true</Elem>
+            <Elem>BOARD=SAMC21_XPLAINED_PRO</Elem>
+            <Elem>__SAMC21J18A__</Elem>
+            <Elem>printf=iprintf</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>include/FreeRTOS</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-10.0.0/Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>__FREERTOS__</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1">
+        <cTool>
+          <incDir>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/include</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/freertos-8.0.1/Source/portable/GCC/ARM_CM0</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/thirdparty/freertos/demo/oled1_xpro_example/samd20_xplained_pro/gcc</pElem>
+            <pElem>../asf/xdk-asf-3.39.0/sam0/applications/led_toggle/samc21_xplained_pro/gcc</pElem>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+      </folder>
     </conf>
   </confs>
 </configurationDescriptor>

@@ -84,6 +84,20 @@
  * Support and FAQ: visit <a href="http://www.atmel.com/design-support/">Atmel Support</a>
  */
 
+// From module: FreeRTOS - kernel 8.0.1
+#include <FreeRTOS.h>
+#include <StackMacros.h>
+#include <croutine.h>
+#include <event_groups.h>
+#include <list.h>
+#include <mpu_wrappers.h>
+#include <portable.h>
+#include <projdefs.h>
+#include <queue.h>
+#include <semphr.h>
+#include <task.h>
+#include <timers.h>
+
 // From module: Common SAM0 compiler driver
 #include <compiler.h>
 #include <status_codes.h>
@@ -120,18 +134,8 @@
 // From module: SYSTEM - Reset Management for SAM C20/C21
 #include <reset.h>
 
-
-/** Handler for the device SysTick module, called when the SysTick counter
- *  reaches the set period.
- *
- *  \note As this is a raw device interrupt, the function name is significant
- *        and must not be altered to ensure it is hooked into the device's
- *        vector table.
- */
-void SysTick_Handler(void)
-{
-	port_pin_toggle_output_level(LED_0_PIN);
-}
+#define ABOUT_TASK_PRIORITY     (tskIDLE_PRIORITY + 1)
+#define ABOUT_TASK_DELAY        (100 / portTICK_RATE_MS)
 
 /** Configure LED0, turn it off*/
 static void config_led(void)
@@ -144,15 +148,31 @@ static void config_led(void)
 	port_pin_set_output_level(LED_0_PIN, LED_0_INACTIVE);
 }
 
+static void led_task(void *params) {
+    config_led();
+    while (1) {
+        port_pin_toggle_output_level(LED_0_PIN);
+    }
+}
+
 int main(void)
 {
 	system_init();
 
 	/*Configure system tick to generate periodic interrupts */
-	SysTick_Config(system_gclk_gen_get_hz(GCLK_GENERATOR_0));
+	//SysTick_Config(system_gclk_gen_get_hz(GCLK_GENERATOR_0));
+        
+        xTaskCreate(led_task,
+            (const char *) "Led",
+            configMINIMAL_STACK_SIZE,
+            NULL,
+            ABOUT_TASK_PRIORITY,
+            NULL);
 
-	config_led();
+	// ..and let FreeRTOS run tasks!
+	vTaskStartScheduler();
 
-	while (true) {
-	}
+	do {
+		// Intentionally left empty
+	} while (true);
 }

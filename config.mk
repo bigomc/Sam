@@ -69,6 +69,14 @@ CSRCS = \
        sam0/utils/cmsis/samc21/source/gcc/startup_samc21.c \
        sam0/utils/cmsis/samc21/source/system_samc21.c     \
        sam0/utils/syscalls/gcc/syscalls.c		  \
+       thirdparty/freertos/freertos-10.0.0/Source/croutine.c \
+       thirdparty/freertos/freertos-10.0.0/Source/event_groups.c \
+       thirdparty/freertos/freertos-10.0.0/Source/list.c   \
+       thirdparty/freertos/freertos-10.0.0/Source/portable/GCC/ARM_CM0/port.c \
+       thirdparty/freertos/freertos-10.0.0/Source/portable/MemMang/heap_1.c \
+       thirdparty/freertos/freertos-10.0.0/Source/queue.c  \
+       thirdparty/freertos/freertos-10.0.0/Source/tasks.c  \
+       thirdparty/freertos/freertos-10.0.0/Source/timers.c \
        main.c
 
 # List of assembler source files.
@@ -76,31 +84,34 @@ ASSRCS =
 
 # List of include paths.
 INC_PATH = \
-       common/boards                                      \
-       common/utils                                       \
-       sam0/applications/led_toggle                       \
-       sam0/applications/led_toggle/samc21_xplained_pro   \
-       sam0/boards                                        \
-       sam0/boards/samc21_xplained_pro                    \
-       sam0/drivers/port                                  \
-       sam0/drivers/system                                \
-       sam0/drivers/system/clock                          \
-       sam0/drivers/system/clock/clock_samc20_c21         \
-       sam0/drivers/system/interrupt                      \
-       sam0/drivers/system/interrupt/system_interrupt_samc20_c21 \
-       sam0/drivers/system/pinmux                         \
-       sam0/drivers/system/power                          \
-       sam0/drivers/system/power/power_sam_c              \
-       sam0/drivers/system/reset                          \
-       sam0/drivers/system/reset/reset_sam_c              \
-       sam0/utils                                         \
-       sam0/utils/cmsis/samc21/include                    \
-       sam0/utils/cmsis/samc21/source                     \
-       sam0/utils/header_files                            \
-       sam0/utils/preprocessor                            \
-       thirdparty/CMSIS/Include                           \
-       thirdparty/CMSIS/Lib/GCC \
-       sam0/applications/led_toggle/samc21_xplained_pro/gcc
+       include                                            \
+       include/FreeRTOS                                            \
+       $(ASF_PATH)/common/boards                                      \
+       $(ASF_PATH)/common/utils                                       \
+       $(ASF_PATH)/sam0/applications/led_toggle                       \
+       $(ASF_PATH)/sam0/applications/led_toggle/samc21_xplained_pro   \
+       $(ASF_PATH)/sam0/boards                                        \
+       $(ASF_PATH)/sam0/boards/samc21_xplained_pro                    \
+       $(ASF_PATH)/sam0/drivers/port                                  \
+       $(ASF_PATH)/sam0/drivers/system                                \
+       $(ASF_PATH)/sam0/drivers/system/clock                          \
+       $(ASF_PATH)/sam0/drivers/system/clock/clock_samc20_c21         \
+       $(ASF_PATH)/sam0/drivers/system/interrupt                      \
+       $(ASF_PATH)/sam0/drivers/system/interrupt/system_interrupt_samc20_c21 \
+       $(ASF_PATH)/sam0/drivers/system/pinmux                         \
+       $(ASF_PATH)/sam0/drivers/system/power                          \
+       $(ASF_PATH)/sam0/drivers/system/power/power_sam_c              \
+       $(ASF_PATH)/sam0/drivers/system/reset                          \
+       $(ASF_PATH)/sam0/drivers/system/reset/reset_sam_c              \
+       $(ASF_PATH)/sam0/utils                                         \
+       $(ASF_PATH)/sam0/utils/cmsis/samc21/include                    \
+       $(ASF_PATH)/sam0/utils/cmsis/samc21/source                     \
+       $(ASF_PATH)/sam0/utils/header_files                            \
+       $(ASF_PATH)/sam0/utils/preprocessor                            \
+       $(ASF_PATH)/thirdparty/CMSIS/Include                           \
+       $(ASF_PATH)/thirdparty/CMSIS/Lib/GCC                           \
+       $(ASF_PATH)/thirdparty/freertos/freertos-10.0.0/Source/include  \
+       $(ASF_PATH)/thirdparty/freertos/freertos-10.0.0/Source/portable/GCC/ARM_CM0 \
 
 # Additional search paths for libraries.
 LIB_PATH =  \
@@ -150,7 +161,8 @@ CFLAGS =
 CPPFLAGS = \
        -D ARM_MATH_CM0PLUS=true                           \
        -D BOARD=SAMC21_XPLAINED_PRO                       \
-       -D __SAMC21J18A__
+       -D __SAMC21J18A__                                  \
+       -D __FREERTOS__
 
 # Extra flags to use when linking
 LDFLAGS = \
