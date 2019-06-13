@@ -20,7 +20,7 @@
     <conf name="arm" type="0">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
-        <platform>2</platform>
+        <platform>4</platform>
       </toolsSet>
       <compile>
         <compiledirpicklist>
@@ -40,8 +40,12 @@
         <gdb_interceptlist>
           <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
         </gdb_interceptlist>
+        <gdb_signals>
+        </gdb_signals>
         <gdb_options>
           <DebugOptions>
+            <option name="debug_command"
+                    value="/usr/local/bin/openocd -f atmel_samc21_xplained_pro.cfg -c init -c targets -c halt -c &quot;flash write_image erase ${OUTPUT_PATH}&quot; -c &quot;verify_image ${OUTPUT_PATH}&quot; -c &quot;reset run&quot;"/>
           </DebugOptions>
         </gdb_options>
         <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
@@ -51,6 +55,13 @@
       </nativedebugger>
       <runprofile version="9">
         <runcommandpicklist>
+          <runcommandpicklistitem>make run</runcommandpicklistitem>
+          <runcommandpicklistitem>openocd -f STM32F103C8T6.cfg -c init -c targets -c halt -c “flash write_image erase ${OUTPUT_PATH}” -c “verify_image ${OUTPUT_PATH}” -c “reset run”</runcommandpicklistitem>
+          <runcommandpicklistitem>openocd -f atmel_samc21_xplained_pro.cfg -c init -c targets -c halt -c “flash write_image erase ${OUTPUT_PATH}” -c “verify_image ${OUTPUT_PATH}” -c “reset run”</runcommandpicklistitem>
+          <runcommandpicklistitem>sh openocd -f atmel_samc21_xplained_pro.cfg -c init -c targets -c halt -c “flash write_image erase ${OUTPUT_PATH}” -c “verify_image ${OUTPUT_PATH}” -c “reset run”</runcommandpicklistitem>
+          <runcommandpicklistitem>/usr/local/openocd -f atmel_samc21_xplained_pro.cfg -c init -c targets -c halt -c “flash write_image erase ${OUTPUT_PATH}” -c “verify_image ${OUTPUT_PATH}” -c “reset run”</runcommandpicklistitem>
+          <runcommandpicklistitem>/usr/local/bin/openocd -f atmel_samc21_xplained_pro.cfg -c init -c targets -c halt -c “flash write_image erase ${OUTPUT_PATH}” -c “verify_image ${OUTPUT_PATH}” -c “reset run”</runcommandpicklistitem>
+          <runcommandpicklistitem>/usr/local/bin/openocd -f atmel_samc21_xplained_pro.cfg -c init -c targets -c halt -c "flash write_image erase ${OUTPUT_PATH}" -c "verify_image ${OUTPUT_PATH}" -c "reset run"</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
         </runcommandpicklist>
         <runcommand>"${OUTPUT_PATH}"</runcommand>
@@ -65,7 +76,7 @@
     <conf name="linux" type="0">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
-        <platform>2</platform>
+        <platform>4</platform>
       </toolsSet>
       <compile>
         <compiledirpicklist>
@@ -97,8 +108,9 @@
       <runprofile version="9">
         <runcommandpicklist>
           <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+          <runcommandpicklistitem>make run</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <runcommand>make run</runcommand>
         <rundir>.</rundir>
         <buildfirst>false</buildfirst>
         <terminal-type>0</terminal-type>
